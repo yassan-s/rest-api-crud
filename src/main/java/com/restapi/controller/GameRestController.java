@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.restapi.entity.Game;
@@ -24,4 +25,9 @@ public class GameRestController {
 		return gameService.findAllGames();
 	}
 
+	@GetMapping("/api/games/{id}")
+	public List<Game> gameAll(@PathVariable("id") int id) {
+		// 処理内容は仮実装
+		return gameService.findAllGames();
+	}
 }
