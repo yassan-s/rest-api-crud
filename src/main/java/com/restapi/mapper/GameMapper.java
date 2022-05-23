@@ -24,4 +24,5 @@ public interface GameMapper {
 			+ "WHERE title LIKE CONCAT('%', #{title}, '%') "
 			+ "AND genre LIKE CONCAT('%', #{genre}, '%')")
 	List<Game> findByTitleGenre(@Param("title") String title, @Param("genre")String genre);
+
 }
