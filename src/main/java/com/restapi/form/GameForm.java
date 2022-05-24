@@ -12,6 +12,9 @@ public class GameForm {
 		this.price = price;
 	}
 
+	// Jacksonでは、JSONをJavaオブジェクトに変換（デシリアライズ）するときには、
+	// デフォルトコンストラクタを定義する必要がある
+	public GameForm() {}
 
 	public String getTitle() {
 		return title;
